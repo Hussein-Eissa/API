@@ -192,3 +192,9 @@ def run_with_ngrok():
 if __name__ == '__main__':
     run_with_ngrok()
     app.run(port=5080, use_reloader=False, debug=True)
+
+app = Flask(__name__)
+
+def handler(request):
+    return app(request)
+
