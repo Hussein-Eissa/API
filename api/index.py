@@ -1,7 +1,7 @@
 # !pip install -q flask-ngrok
 # !pip install -q pyngrok
 
-!ngrok authtoken 2tJaGHYqjzpQwPCAimXaP1KeugU_67adGzz2KYop3QPnYkC1t
+# !ngrok authtoken 2tJaGHYqjzpQwPCAimXaP1KeugU_67adGzz2KYop3QPnYkC1t
 
 # Import required libraries
 from flask import Flask, request, jsonify
@@ -192,9 +192,3 @@ def run_with_ngrok():
 if __name__ == '__main__':
     run_with_ngrok()
     app.run(port=5080, use_reloader=False, debug=True)
-
-app = Flask(__name__)
-
-def handler(request):
-    return app(request)
-
