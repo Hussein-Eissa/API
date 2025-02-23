@@ -1,7 +1,7 @@
-!pip install -q flask-ngrok
-!pip install -q pyngrok
+# !pip install -q flask-ngrok
+# !pip install -q pyngrok
 
-!ngrok authtoken 2tJaGHYqjzpQwPCAimXaP1KeugU_67adGzz2KYop3QPnYkC1t
+# !ngrok authtoken 2tJaGHYqjzpQwPCAimXaP1KeugU_67adGzz2KYop3QPnYkC1t
 
 # Import required libraries
 from flask import Flask, request, jsonify
