@@ -3,6 +3,12 @@
 
 # !ngrok authtoken 2tJaGHYqjzpQwPCAimXaP1KeugU_67adGzz2KYop3QPnYkC1t
 
+import os
+from pyngrok import ngrok
+
+ngrok.set_auth_token(os.getenv("2tJaGHYqjzpQwPCAimXaP1KeugU_67adGzz2KYop3QPnYkC1t"))
+
+
 # Import required libraries
 from flask import Flask, request, jsonify
 from pyngrok import ngrok
