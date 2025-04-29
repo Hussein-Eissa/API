@@ -2,10 +2,10 @@ import pandas as pd
 import joblib
 
 # Load the saved model and preprocessing objects
-model = joblib.load('./arrhythmia_risk_model.pkl')
-scaler = joblib.load('./scaler.pkl')
-selector = joblib.load('./selector.pkl')
-encoder = joblib.load('./encoder.pkl')
+model = joblib.load('/arrhythmia_risk_model.pkl')
+scaler = joblib.load('/scaler.pkl')
+selector = joblib.load('/selector.pkl')
+encoder = joblib.load('/encoder.pkl')
 
 # Function to preprocess the input data
 def preprocess_input(data):
