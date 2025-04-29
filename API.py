@@ -241,8 +241,10 @@ def user():
 def BIO_Model():
     try :
         if 'data' not in request.files:
-            Data = '/Model/Data/DefualtData.xlsx'
-            # return jsonify({'error': 'No data part in the request'}), 400
+          try:
+            Data = './Model/DefualtData.xlsx'
+          except Exception as err:
+            return jsonify({'error': 'No data part in the request'}), 400
         else :
             Data = request.files['data']
         
