@@ -34,7 +34,7 @@ def preprocess_input(data):
 # Function to make predictions
 def predict_play_probability(file_path):
     # Load the Excel file
-    data = pd.read_excel('/Data/DefualtData.xlsx', sheet_name='Sheet1')
+    data = pd.read_excel('DefualtData.xlsx', sheet_name='Sheet1')
 
     # Preprocess the input data
     X_processed, player_names = preprocess_input(data)
