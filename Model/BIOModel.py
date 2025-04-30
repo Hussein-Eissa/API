@@ -1,12 +1,13 @@
 import pandas as pd
 import joblib
 import os
+import numpy as np
 
 # Load the saved model and preprocessing objects
-model = joblib.load(os.path.join('arrhythmia_risk_model.pkl'))
-scaler = joblib.load(os.path.join('scaler.pkl'))
-selector = joblib.load(os.path.join('selector.pkl'))
-encoder = joblib.load(os.path.join('encoder.pkl'))
+model = joblib.load('.\\Model\\arrhythmia_risk_model.pkl')
+scaler = joblib.load('.\\Model\\scaler.pkl')
+selector = joblib.load('.\\Model\\selector.pkl')
+encoder = joblib.load('.\\Model\\encoder.pkl')
 
 # Function to preprocess the input data
 def preprocess_input(data):
@@ -35,7 +36,7 @@ def preprocess_input(data):
 # Function to make predictions
 def predict_play_probability(file_path):
     # Load the Excel file
-    data = pd.read_excel(os.path.join('DefualtData.xlsx'), sheet_name='Sheet1')
+    data = pd.read_excel(file_path, sheet_name='Sheet1')
 
     # Preprocess the input data
     X_processed, player_names = preprocess_input(data)

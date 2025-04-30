@@ -242,7 +242,7 @@ def BIO_Model():
     try :
         if 'data' not in request.files:
           try:
-            Data = os.path.join('Model', 'DefualtData.xlsx')
+            Data = ".\\Model\\DefualtData.xlsx"
           except Exception as err:
             return jsonify({'error': 'No data part in the request'}), 400
         else :

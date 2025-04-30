@@ -5,3 +5,5 @@ flask-cors
 pandas
 joblib
 logging
+numpy
+openpyxl
